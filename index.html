@@ -1,0 +1,868 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>When You Cannot Explain What You Feel — Free Guide</title>
+    <meta
+      name="description"
+      content="A free guide to help young adults put words to emotional pain — before silence turns into isolation."
+    />
+
+    <!-- Light, modern font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      :root {
+        --bg: #f7fafc;
+        --card: #ffffff;
+        --text: #0f172a;
+        --muted: #475569;
+        --muted2: #64748b;
+        --border: #e2e8f0;
+        --primary: #2563eb;
+        --primary2: #1d4ed8;
+        --accent: #10b981;
+        --shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+        --radius: 18px;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+      html,
+      body {
+        height: 100%;
+      }
+      body {
+        margin: 0;
+        font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial,
+          sans-serif;
+        background: radial-gradient(
+            1200px 600px at 10% 0%,
+            rgba(37, 99, 235, 0.12),
+            transparent 60%
+          ),
+          radial-gradient(
+            1200px 600px at 90% 0%,
+            rgba(16, 185, 129, 0.12),
+            transparent 60%
+          ),
+          var(--bg);
+        color: var(--text);
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      /* Layout */
+      .container {
+        max-width: 1120px;
+        margin: 0 auto;
+        padding: 24px;
+      }
+
+      /* Top bar */
+      .topbar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+        padding: 12px 0;
+      }
+      .brand {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-weight: 800;
+        letter-spacing: -0.02em;
+      }
+      .brand-badge {
+        width: 40px;
+        height: 40px;
+        border-radius: 14px;
+        background: linear-gradient(135deg, var(--primary), #60a5fa);
+        display: grid;
+        place-items: center;
+        box-shadow: var(--shadow);
+      }
+      .brand-badge svg {
+        width: 22px;
+        height: 22px;
+        fill: white;
+      }
+      .top-actions {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+      }
+      .pill {
+        font-size: 13px;
+        padding: 8px 12px;
+        border-radius: 999px;
+        border: 1px solid var(--border);
+        background: rgba(255, 255, 255, 0.7);
+        color: var(--muted);
+      }
+
+      /* Hero */
+      .hero {
+        display: grid;
+        grid-template-columns: 1.1fr 0.9fr;
+        gap: 26px;
+        align-items: stretch;
+        margin-top: 14px;
+      }
+
+      .hero-left {
+        background: rgba(255, 255, 255, 0.8);
+        border: 1px solid var(--border);
+        border-radius: var(--radius);
+        padding: 28px;
+        box-shadow: var(--shadow);
+        position: relative;
+        overflow: hidden;
+      }
+.hero-left{
+  display:flex;
+  flex-direction:column;
+}
+
+.cta-row{
+  margin-top:auto;          /* pushes CTA area downward */
+}
+
+.hero-bottom{
+  margin-top:16px;
+  display:grid;
+  gap:12px;
+}
+
+.mini-proof{
+  display:grid;
+  gap:10px;
+  border:1px solid var(--border);
+  background: rgba(255,255,255,0.7);
+  border-radius:14px;
+  padding:14px;
+}
+
+.proof-item{
+  display:flex;
+  gap:10px;
+  align-items:flex-start;
+}
+
+.proof-item strong{
+  font-size:13px;
+  display:block;
+  margin-bottom:2px;
+}
+
+.proof-item span{
+  font-size:12.5px;
+  color: var(--muted2);
+  line-height:1.35;
+}
+
+.dot{
+  width:10px;
+  height:10px;
+  border-radius:999px;
+  background: linear-gradient(135deg, var(--primary), var(--accent));
+  margin-top:4px;
+  flex:0 0 10px;
+}
+
+.mini-quote{
+  display:flex;
+  gap:12px;
+  align-items:flex-start;
+  border:1px solid var(--border);
+  background: rgba(255,255,255,0.75);
+  border-radius:14px;
+  padding:14px;
+}
+
+.qmark{
+  font-size:26px;
+  font-weight:800;
+  line-height:1;
+  color: var(--primary);
+}
+
+.qtext{
+  font-weight:700;
+  color: var(--text);
+  letter-spacing:-0.01em;
+}
+
+.qsub{
+  margin-top:4px;
+  font-size:12.5px;
+  color: var(--muted2);
+}
+      .hero-left:before {
+        content: "";
+        position: absolute;
+        inset: -80px -120px auto auto;
+        width: 240px;
+        height: 240px;
+        border-radius: 50%;
+        background: radial-gradient(
+          closest-side,
+          rgba(37, 99, 235, 0.18),
+          transparent
+        );
+      }
+
+      .kicker {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        font-size: 13px;
+        font-weight: 600;
+        color: var(--primary2);
+        background: rgba(37, 99, 235, 0.1);
+        border: 1px solid rgba(37, 99, 235, 0.15);
+        padding: 8px 12px;
+        border-radius: 999px;
+      }
+
+      h1 {
+        margin: 16px 0 10px;
+        font-size: clamp(28px, 4.1vw, 44px);
+        line-height: 1.07;
+        letter-spacing: -0.04em;
+      }
+
+      .subhead {
+        margin: 0 0 18px;
+        color: var(--muted);
+        font-size: 16px;
+        line-height: 1.55;
+        max-width: 58ch;
+      }
+
+      .hero-points {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+        margin: 18px 0 22px;
+      }
+
+      .point {
+        display: flex;
+        gap: 10px;
+        padding: 12px;
+        border: 1px solid var(--border);
+        background: rgba(255, 255, 255, 0.7);
+        border-radius: 14px;
+      }
+      .point svg {
+        width: 22px;
+        height: 22px;
+        flex: 0 0 22px;
+      }
+      .point strong {
+        display: block;
+        font-size: 14px;
+        margin-bottom: 2px;
+      }
+      .point span {
+        display: block;
+        font-size: 13px;
+        color: var(--muted2);
+        line-height: 1.35;
+      }
+
+      .cta-row {
+        display: flex;
+        gap: 12px;
+        flex-wrap: wrap;
+        align-items: center;
+        margin-top: 8px;
+      }
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        border-radius: 14px;
+        padding: 14px 16px;
+        font-weight: 700;
+        border: 1px solid transparent;
+        cursor: pointer;
+        transition: 0.15s ease;
+        user-select: none;
+      }
+      .btn-primary {
+        background: linear-gradient(135deg, var(--primary), #3b82f6);
+        color: white;
+        box-shadow: 0 12px 24px rgba(37, 99, 235, 0.25);
+      }
+      .btn-primary:hover {
+        transform: translateY(-1px);
+        background: linear-gradient(135deg, var(--primary2), #3b82f6);
+      }
+      .btn-ghost {
+        background: rgba(255, 255, 255, 0.7);
+        border-color: var(--border);
+        color: var(--text);
+      }
+      .btn-ghost:hover {
+        transform: translateY(-1px);
+        background: #fff;
+      }
+      .cta-note {
+        font-size: 13px;
+        color: var(--muted2);
+        display: flex;
+        gap: 8px;
+        align-items: center;
+      }
+
+      /* Hero Right: HD image card */
+      .hero-right {
+        border-radius: var(--radius);
+        overflow: hidden;
+        border: 1px solid var(--border);
+        box-shadow: var(--shadow);
+        background: #fff;
+        display: grid;
+        grid-template-rows: 1fr auto;
+      }
+      .hero-img {
+        width: 100%;
+        height: 100%;
+        min-height: 330px;
+        object-fit: cover;
+        display: block;
+      }
+      .hero-caption {
+        padding: 14px 16px;
+        display: flex;
+        gap: 10px;
+        align-items: flex-start;
+        color: var(--muted);
+        border-top: 1px solid var(--border);
+        background: rgba(255, 255, 255, 0.92);
+      }
+      .hero-caption svg {
+        width: 20px;
+        height: 20px;
+        flex: 0 0 20px;
+        margin-top: 1px;
+      }
+      .hero-caption b {
+        color: var(--text);
+      }
+
+      /* Sections */
+     .grid{
+  margin-top: 18px;                 /* keep consistent spacing from hero */
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+  align-items: stretch;
+}
+
+/* Make cards match hero card edge feel */
+.card{
+  background: rgba(255,255,255,0.85);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 22px;
+  box-shadow: var(--shadow);
+  margin: 0;                        /* IMPORTANT: kill default margin */
+}
+      .card h2 {
+        margin: 0 0 10px;
+        font-size: 18px;
+        letter-spacing: -0.02em;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+      .card h2 svg {
+        width: 22px;
+        height: 22px;
+      }
+      .card p {
+        margin: 0;
+        color: var(--muted);
+        line-height: 1.6;
+      }
+
+      .bullets {
+        margin: 12px 0 0;
+        padding: 0;
+        list-style: none;
+        display: grid;
+        gap: 10px;
+      }
+      .bullets li {
+        display: flex;
+        gap: 10px;
+        align-items: flex-start;
+        color: var(--muted);
+        line-height: 1.45;
+      }
+      .bullets li svg {
+        width: 18px;
+        height: 18px;
+        flex: 0 0 18px;
+        margin-top: 2px;
+        fill: var(--accent);
+      }
+
+      /* CTA block */
+      .cta-block {
+        margin-top: 18px;
+        padding: 22px;
+        border-radius: var(--radius);
+        background: linear-gradient(
+          135deg,
+          rgba(37, 99, 235, 0.12),
+          rgba(16, 185, 129, 0.10)
+        );
+        border: 1px solid rgba(37, 99, 235, 0.12);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 14px;
+        flex-wrap: wrap;
+      }
+      .cta-block .text {
+        max-width: 70ch;
+      }
+      .cta-block h3 {
+        margin: 0 0 6px;
+        font-size: 18px;
+        letter-spacing: -0.02em;
+      }
+      .cta-block p {
+        margin: 0;
+        color: var(--muted);
+        line-height: 1.6;
+      }
+
+      /* Footer */
+      footer {
+        margin: 22px 0 10px;
+        color: var(--muted2);
+        font-size: 13px;
+        display: flex;
+        justify-content: space-between;
+        gap: 10px;
+        flex-wrap: wrap;
+        padding-top: 10px;
+      }
+
+      /* Responsive */
+      @media (max-width: 920px) {
+        .hero {
+          grid-template-columns: 1fr;
+        }
+        .hero-points {
+          grid-template-columns: 1fr;
+        }
+        .grid {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <!-- Top bar -->
+      <div class="topbar">
+        <div class="brand">
+          <div class="brand-badge" aria-hidden="true">
+            <!-- heart icon -->
+            <svg viewBox="0 0 24 24">
+              <path
+                d="M12 21s-7.2-4.4-9.7-9C-.3 7.7 2.3 4 6 4c2 0 3.4 1.1 4 2 .6-.9 2-2 4-2 3.7 0 6.3 3.7 3.7 8-2.5 4.6-9.7 9-9.7 9z"
+              />
+            </svg>
+          </div>
+          <div>
+            <div style="font-size: 14px; color: var(--muted2); font-weight: 700">
+              Free Guide
+            </div>
+            <div style="font-size: 15px">Hope and Healing</div>
+          </div>
+        </div>
+
+        <div class="top-actions">
+       
+          <a class="pill" href="https://haidertoqeer.gumroad.com/l/hopehealingmini">Download</a>
+        </div>
+      </div>
+
+      <!-- Hero -->
+      <section class="hero">
+        <div class="hero-left">
+          <div class="kicker">
+            <!-- spark icon -->
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+              <path
+                d="M12 2l1.2 5.2L18 8.4l-4.3 2.7L15 16l-3-3.1L9 16l1.3-4.9L6 8.4l4.8-1.2L12 2z"
+                fill="currentColor"
+              />
+            </svg>
+            Simple guide. Real relief.
+          </div>
+
+          <h1>When You Cannot Explain What You Feel</h1>
+
+          <p class="subhead">
+            A free guide to help young adults put words to emotional pain — before
+            silence turns into isolation.
+          </p>
+
+          <div class="hero-points">
+            <div class="point">
+              <!-- chat icon -->
+              <svg viewBox="0 0 24 24" fill="none">
+                <path
+                  d="M4 4h16v11H7l-3 3V4z"
+                  stroke="#2563eb"
+                  stroke-width="2"
+                  stroke-linejoin="round"
+                />
+              </svg>
+              <div>
+                <strong>Find the right words</strong>
+                <span>Simple sentences for difficult conversations.</span>
+              </div>
+            </div>
+
+            <div class="point">
+              <!-- compass icon -->
+              <svg viewBox="0 0 24 24" fill="none">
+                <path
+                  d="M12 2l7 19-7-4-7 4 7-19z"
+                  stroke="#10b981"
+                  stroke-width="2"
+                  stroke-linejoin="round"
+                />
+              </svg>
+              <div>
+                <strong>Feel less lost</strong>
+                <span>A short exercise to organize thoughts clearly.</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="cta-row" id="download">
+            <!-- Replace # with your Gumroad/ConvertKit/Google Drive link -->
+            <a class="btn btn-primary" href="https://haidertoqeer.gumroad.com/l/hopehealingmini" role="button">
+              <!-- download icon -->
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+                <path
+                  d="M12 3v10m0 0l4-4m-4 4l-4-4M5 21h14"
+                  stroke="white"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+              Download Free Guide
+            </a>
+
+            <a class="btn btn-ghost" href="https://haidertoqeer.gumroad.com/l/hopehealingmini" role="button">
+              <!-- book icon -->
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+                <path
+                  d="M4 5.5C4 4.12 5.12 3 6.5 3H20v18H6.5A2.5 2.5 0 0 1 4 18.5v-13z"
+                  stroke="#0f172a"
+                  stroke-width="2"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M8 7h8M8 11h8"
+                  stroke="#0f172a"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                />
+              </svg>
+              See what’s inside
+            </a>
+
+            <div class="cta-note">
+              <!-- shield icon -->
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                <path
+                  d="M12 2l8 4v6c0 5-3.4 9.4-8 10-4.6-.6-8-5-8-10V6l8-4z"
+                  stroke="#64748b"
+                  stroke-width="2"
+                  stroke-linejoin="round"
+                />
+              </svg>
+              No diagnosis. No complicated psychology. Just clarity.
+            </div>
+          </div>
+          <div class="hero-bottom">
+  <div class="mini-proof">
+    <div class="proof-item">
+      <span class="dot"></span>
+      <div>
+        <strong>Short, readable</strong>
+        <span>5–7 minutes to finish</span>
+      </div>
+    </div>
+
+    <div class="proof-item">
+      <span class="dot"></span>
+      <div>
+        <strong>Practical</strong>
+        <span>Real sentences you can use</span>
+      </div>
+    </div>
+
+    <div class="proof-item">
+      <span class="dot"></span>
+      <div>
+        <strong>Shareable</strong>
+        <span>Made for parents and young adults</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="mini-quote">
+    <span class="qmark">“</span>
+    <div>
+      <div class="qtext">Sometimes the hardest part is not pain. It is finding the words.</div>
+      <div class="qsub">Free guide · No diagnosis · Just clarity</div>
+    </div>
+  </div>
+</div>
+        </div>
+
+        <div class="hero-right">
+          <!-- HD image (Unsplash). You can replace with your own image -->
+          <img
+            class="hero-img"
+            src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=1400&q=80"
+            alt="A calm, supportive moment — light, hopeful tone."
+            loading="lazy"
+          />
+          <div class="hero-caption">
+            <!-- quote icon -->
+            <svg viewBox="0 0 24 24" fill="none">
+              <path
+                d="M7 7h6v6H9l-2 2V7zm10 0h6v6h-4l-2 2V7z"
+                stroke="#2563eb"
+                stroke-width="2"
+                stroke-linejoin="round"
+              />
+            </svg>
+            <div>
+              <b>Sometimes healing begins with language.</b>
+              <div style="margin-top: 4px">
+                Read it slowly. Share it with someone who might need it.
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Sections -->
+      <section class="grid" id="learn" aria-label="What you’ll learn and why I wrote this">
+        <div class="card">
+          <h2>
+            <!-- lightbulb icon -->
+            <svg viewBox="0 0 24 24" fill="none">
+              <path
+                d="M12 2a7 7 0 0 0-4 12.7V17a2 2 0 0 0 2 2h4a2 2 0 0 0 2-2v-2.3A7 7 0 0 0 12 2z"
+                stroke="#0f172a"
+                stroke-width="2"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M10 21h4"
+                stroke="#0f172a"
+                stroke-width="2"
+                stroke-linecap="round"
+              />
+            </svg>
+            What You’ll Learn
+          </h2>
+
+          <p>
+            Inside this short guide, you’ll discover practical ways to name what
+            hurts and communicate it clearly.
+          </p>
+
+          <ul class="bullets">
+            <li>
+              <svg viewBox="0 0 24 24">
+                <path
+                  d="M20 6L9 17l-5-5"
+                  stroke="currentColor"
+                  stroke-width="3"
+                  fill="none"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+              How to recognize emotional overload before it becomes burnout
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24">
+                <path
+                  d="M20 6L9 17l-5-5"
+                  stroke="currentColor"
+                  stroke-width="3"
+                  fill="none"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+              The difference between anger and hidden sadness
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24">
+                <path
+                  d="M20 6L9 17l-5-5"
+                  stroke="currentColor"
+                  stroke-width="3"
+                  fill="none"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+              Why numbness is often misunderstood
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24">
+                <path
+                  d="M20 6L9 17l-5-5"
+                  stroke="currentColor"
+                  stroke-width="3"
+                  fill="none"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+              Simple sentences to start difficult conversations
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24">
+                <path
+                  d="M20 6L9 17l-5-5"
+                  stroke="currentColor"
+                  stroke-width="3"
+                  fill="none"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+              A short exercise to organize your thoughts clearly
+            </li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h2>
+            <!-- pen icon -->
+            <svg viewBox="0 0 24 24" fill="none">
+              <path
+                d="M12 20h9"
+                stroke="#0f172a"
+                stroke-width="2"
+                stroke-linecap="round"
+              />
+              <path
+                d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4 12.5-12.5z"
+                stroke="#0f172a"
+                stroke-width="2"
+                stroke-linejoin="round"
+              />
+            </svg>
+            Why I Wrote This
+          </h2>
+
+          <p>
+            As someone who has studied emotional recovery and written extensively
+            about silent struggles, I’ve seen one common pattern:
+          </p>
+
+          <div style="margin-top: 12px; padding: 14px; border-radius: 14px; border: 1px solid var(--border); background: rgba(255,255,255,.7)">
+            <p style="margin: 0; color: var(--text); font-weight: 700">
+              People do not fail because they are weak.
+            </p>
+            <p style="margin: 6px 0 0; color: var(--muted)">
+              They struggle because they do not know how to express what hurts.
+            </p>
+          </div>
+
+          <p style="margin-top: 12px">
+            This guide is a starting point.
+          </p>
+
+          <!-- Small HD image inside card (optional) -->
+          <div style="margin-top: 12px; border-radius: 14px; overflow: hidden; border: 1px solid var(--border)">
+            <img
+              src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=1400&q=80"
+              alt="Supportive conversation — calm, hopeful."
+              loading="lazy"
+              style="width: 100%; height: 180px; object-fit: cover; display: block"
+            />
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA Block -->
+      <section class="cta-block" aria-label="Call to action">
+        <div class="text">
+          <h3>Download the free guide below.</h3>
+          <p>
+            Read it slowly. Share it with someone who might need it. Sometimes healing begins with language.
+          </p>
+        </div>
+        <a class="btn btn-primary" href="https://haidertoqeer.gumroad.com/l/hopehealingmini" role="button" aria-label="Download Free Guide">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+            <path
+              d="M12 3v10m0 0l4-4m-4 4l-4-4M5 21h14"
+              stroke="white"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+          Download Free Guide
+        </a>
+      </section>
+
+      <footer>
+        <div>© <span id="year"></span> Hope and Healing · Free Resource</div>
+      </footer>
+    </div>
+
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+
+      // OPTIONAL: Smooth scroll for internal anchors
+      document.querySelectorAll('a[href^="#"]').forEach((a) => {
+        a.addEventListener("click", (e) => {
+          const id = a.getAttribute("href");
+          if (!id || id === "#") return;
+          const el = document.querySelector(id);
+          if (!el) return;
+          e.preventDefault();
+          el.scrollIntoView({ behavior: "smooth", block: "start" });
+        });
+      });
+    </script>
+  </body>
+</html>
